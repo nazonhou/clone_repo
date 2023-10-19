@@ -1,0 +1,9 @@
+---
+# tasks file for roles/clone_repo
+- name: Clone the repo
+  ansible.builtin.git:
+    repo: '{{ repo }}'
+    dest: '{{ dest }}'
+    single_branch: yes
+    version: '{{ branch }}'
+    accept_hostkey: true
